@@ -1,6 +1,8 @@
 # Install docker
 
-Install docker, create a group `docker` and add your user to this group. Log out and log in again.
+Install docker, create a group `docker` and add your user to this group.
+Run `sudo systemctl start docker` (or equivalent).
+Log out and log in again.
 
 # Build & run the container
 
