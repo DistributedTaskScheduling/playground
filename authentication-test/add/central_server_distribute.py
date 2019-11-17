@@ -12,6 +12,7 @@ while True:
         continue
     read_lines = database.readlines()
     for read_line in read_lines:
-        server_log.write('Distributed job %s\n' % read_line)
+        print('Distributed job %s' % read_line)
+        server_log.write('Distributed job %s' % read_line)
     database.close()
     remove('database')
