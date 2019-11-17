@@ -8,7 +8,7 @@ while True:
     sleep(5.0)
     try:
         database = open('database', 'r')
-    except FileNotFoundError:
+    except Exception:  # Exception type different between Python 2/3
         continue
     read_lines = database.readlines()
     for read_line in read_lines:
