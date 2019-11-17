@@ -1,4 +1,4 @@
-#! /usr/bin/python3
+#! /usr/bin/python
 import argparse
 import paramiko
 
@@ -13,4 +13,8 @@ client = paramiko.SSHClient()
 client.set_missing_host_key_policy(policy=paramiko.AutoAddPolicy())
 client.connect(hostname=args.hostname, username=args.username, password=args.password)
 stdin, stdout, stderr = client.exec_command('./central_server_add.py --job=%s' % args.job)
+for line in stdout:
+    print(line)
+for line in stderr:
+    print(line)
 client.close()
