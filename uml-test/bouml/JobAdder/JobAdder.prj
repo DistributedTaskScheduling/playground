@@ -1,0 +1,457 @@
+format 222
+"JobAdder"
+  revision 2
+  modified_by 34 "johannesg"
+  python_root_dir "/home/johannesg/Documents/Informatik/pse/playground/uml-test/bouml/generated/"
+
+
+  
+  // class settings
+  default_attribute_visibility private default_relation_visibility private default_operation_visibility public
+  
+  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
+  
+  classcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  usecasediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes gradient none show_stereotype_properties no end
+  
+  sequencediagramsettings show_full_operations_definition no show_class_of_operation no write_horizontally yes instances_drawing_mode natural drawing_language uml draw_all_relations yes shadow yes gradient none show_stereotype_properties no show_class_context_mode no show_msg_context_mode no end
+  
+  collaborationdiagramsettings show_full_operations_definition no show_class_of_operation no show_hierarchical_rank no write_horizontally yes instances_drawing_mode natural drawing_language uml package_name_in_tab no show_class_pack_context_mode no show_msg_context_mode no draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectdiagramsettings write_horizontally yes package_name_in_tab no show_class_pack_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  componentdiagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  deploymentdiagramsettings package_name_in_tab no show_context_mode no write_horizontally yes auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  statediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes write_label_horizontally yes show_trans_definition no draw_all_relations yes shadow yes gradient none
+   show_activities yes region_horizontally yes drawing_language uml show_stereotype_properties no end
+  
+  activitydiagramsettings package_name_in_tab no show_context_mode no show_opaque_action_definition no auto_label_position yes write_label_horizontally no draw_all_relations yes shadow yes gradient none
+   show_infonote yes drawing_language uml show_stereotype_properties no end
+  
+  class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white generalization_color black 
+  dpi 96
+  font_size 9
+  diagram_format A4
+
+  image_root_dir ""
+
+
+  mark_for_import
+  
+  package_ref 128290 // CentralServer
+
+  package_ref 134818 // Common
+
+  package_ref 128034 // UserClient
+
+  package_ref 128162 // WorkerClient
+
+  classview 134818 "ClassView"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 134562 "Dependencies"
+      classdiagramsettings member_max_width 0 end
+      size A4
+    end
+
+    class 134562 "JobCenter"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134818 // <dependency>
+	relation 134818 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 134818 // <dependency>
+	  b parent class_ref 135074 // Database
+      end
+
+      classrelation 134946 // <dependency>
+	relation 134946 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 134946 // <dependency>
+	  b parent class_ref 135458 // WebAPI
+      end
+
+      classrelation 135202 // <dependency>
+	relation 135202 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 135202 // <dependency>
+	  b parent class_ref 135330 // Notifier
+      end
+
+      classrelation 135330 // <dependency>
+	relation 135330 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 135330 // <dependency>
+	  b parent class_ref 135714 // Scheduler
+      end
+
+      classrelation 135458 // <dependency>
+	relation 135458 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 135458 // <dependency>
+	  b parent class_ref 135842 // Dispatcher
+      end
+    end
+
+    class 134690 "JobAdder"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 134562 // <dependency>
+	relation 134562 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 134562 // <dependency>
+	  b parent class_ref 134818 // CLI
+      end
+
+      classrelation 134690 // <dependency>
+	relation 134690 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 134690 // <dependency>
+	  b parent class_ref 134946 // UserClientConfig
+      end
+
+      classrelation 136098 // <dependency>
+	relation 136098 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 136098 // <dependency>
+	  b parent class_ref 135202 // Job
+      end
+
+      classrelation 136354 // <dependency>
+	relation 136354 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 136354 // <dependency>
+	  b parent class_ref 136354 // SSHConnection
+      end
+    end
+
+    class 134818 "CLI"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 134946 "UserClientConfig"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 135074 "Database"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 135202 "Job"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 135330 "Notifier"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 135458 "WebAPI"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 135586 "LocalJobAdder"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135842 // <dependency>
+	relation 135842 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 135842 // <dependency>
+	  b parent class_ref 135202 // Job
+      end
+
+      classrelation 136226 // <dependency>
+	relation 136226 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 136226 // <dependency>
+	  b parent class_ref 136354 // SSHConnection
+      end
+    end
+
+    class 135714 "Scheduler"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 135842 "Dispatcher"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135970 // <dependency>
+	relation 135970 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 135970 // <dependency>
+	  b parent class_ref 135202 // Job
+      end
+
+      classrelation 136610 // <dependency>
+	relation 136610 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 136610 // <dependency>
+	  b parent class_ref 136354 // SSHConnection
+      end
+    end
+
+    class 135970 "JobWorker"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135586 // <dependency>
+	relation 135586 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 135586 // <dependency>
+	  b parent class_ref 136098 // DockerWrapper
+      end
+
+      classrelation 135714 // <dependency>
+	relation 135714 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 135714 // <dependency>
+	  b parent class_ref 136226 // WorkerClientConfig
+      end
+
+      classrelation 136482 // <dependency>
+	relation 136482 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 136482 // <dependency>
+	  b parent class_ref 136354 // SSHConnection
+      end
+    end
+
+    class 136098 "DockerWrapper"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 136226 "WorkerClientConfig"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 136354 "SSHConnection"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136738 // <dependency>
+	relation 136738 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 136738 // <dependency>
+	  b parent class_ref 136610 // YAMLWriter
+      end
+
+      classrelation 136866 // <dependency>
+	relation 136866 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 136866 // <dependency>
+	  b parent class_ref 136482 // YAMLReader
+      end
+    end
+
+    class 136482 "YAMLReader"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 136610 "YAMLWriter"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+  end
+end

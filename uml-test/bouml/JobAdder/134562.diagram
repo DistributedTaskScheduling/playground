@@ -1,0 +1,177 @@
+format 222
+
+packagecanvas 128034 
+  package_ref 128290 // CentralServer
+    xyzwh 201 8 2000 469 247
+end
+classcanvas 128162 class_ref 134562 // JobCenter
+  classdiagramsettings member_max_width 0 end
+  xyz 386 67 2005
+end
+packagecanvas 128290 
+  package_ref 128034 // UserClient
+    xyzwh 25 250 2000 207 295
+end
+packagecanvas 128418 
+  package_ref 128162 // WorkerClient
+    xyzwh 560 283 2000 271 263
+end
+packagecanvas 128546 
+  package_ref 134818 // Common
+    xyzwh 227 575 2000 451 259
+end
+classcanvas 128674 class_ref 134690 // JobAdder
+  classdiagramsettings member_max_width 0 end
+  xyz 123 386 2005
+end
+classcanvas 128802 class_ref 134818 // CLI
+  classdiagramsettings member_max_width 0 end
+  xyz 56 454 2005
+end
+classcanvas 128930 class_ref 134946 // UserClientConfig
+  classdiagramsettings member_max_width 0 end
+  xyz 28 314 2005
+end
+classcanvas 129314 class_ref 135074 // Database
+  classdiagramsettings member_max_width 0 end
+  xyz 234 71 2010
+end
+classcanvas 129442 class_ref 135202 // Job
+  classdiagramsettings member_max_width 0 end
+  xyz 254 639 2005
+end
+classcanvas 129570 class_ref 135330 // Notifier
+  classdiagramsettings member_max_width 0 end
+  xyz 553 71 2005
+end
+classcanvas 129698 class_ref 135458 // WebAPI
+  classdiagramsettings member_max_width 0 end
+  xyz 242 140 2005
+end
+classcanvas 129826 class_ref 135586 // LocalJobAdder
+  classdiagramsettings member_max_width 0 end
+  xyz 219 198 2005
+end
+classcanvas 129954 class_ref 135714 // Scheduler
+  classdiagramsettings member_max_width 0 end
+  xyz 546 133 2005
+end
+classcanvas 130082 class_ref 135842 // Dispatcher
+  classdiagramsettings member_max_width 0 end
+  xyz 541 192 2005
+end
+classcanvas 130210 class_ref 135970 // JobWorker
+  classdiagramsettings member_max_width 0 end
+  xyz 570 411 2005
+end
+classcanvas 130338 class_ref 136098 // DockerWrapper
+  classdiagramsettings member_max_width 0 end
+  xyz 666 490 2005
+end
+classcanvas 130466 class_ref 136226 // WorkerClientConfig
+  classdiagramsettings member_max_width 0 end
+  xyz 637 329 2005
+end
+classcanvas 130594 class_ref 136354 // SSHConnection
+  classdiagramsettings member_max_width 0 end
+  xyz 369 642 2005
+end
+classcanvas 130722 class_ref 136482 // YAMLReader
+  classdiagramsettings member_max_width 0 end
+  xyz 296 739 2005
+end
+classcanvas 130850 class_ref 136610 // YAMLWriter
+  classdiagramsettings member_max_width 0 end
+  xyz 493 739 2005
+end
+relationcanvas 129058 relation_ref 134562 // <dependency>
+  from ref 128674 z 2006 to ref 128802
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129186 relation_ref 134690 // <dependency>
+  from ref 128674 z 2006 to ref 128930
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130978 relation_ref 134818 // <dependency>
+  from ref 128162 z 2011 to ref 129314
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131106 relation_ref 134946 // <dependency>
+  from ref 128162 z 2006 to ref 129698
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131362 relation_ref 135202 // <dependency>
+  from ref 128162 z 2006 to ref 129570
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131490 relation_ref 135330 // <dependency>
+  from ref 128162 z 2006 to ref 129954
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131618 relation_ref 135458 // <dependency>
+  from ref 128162 z 2006 to ref 130082
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131746 relation_ref 135586 // <dependency>
+  from ref 130210 z 2006 to ref 130338
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131874 relation_ref 135714 // <dependency>
+  from ref 130210 z 2006 to ref 130466
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132002 relation_ref 135842 // <dependency>
+  from ref 129826 z 2006 to ref 129442
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132130 relation_ref 135970 // <dependency>
+  from ref 130082 z 2006 to ref 129442
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132258 relation_ref 136098 // <dependency>
+  from ref 128674 z 2006 to ref 129442
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132386 relation_ref 136226 // <dependency>
+  from ref 129826 z 2006 to ref 130594
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132514 relation_ref 136354 // <dependency>
+  from ref 128674 z 2006 to ref 130594
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132642 relation_ref 136482 // <dependency>
+  from ref 130210 z 2006 to ref 130594
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132770 relation_ref 136610 // <dependency>
+  from ref 130082 z 2006 to ref 130594
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132898 relation_ref 136738 // <dependency>
+  from ref 130594 z 2006 to ref 130850
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 133026 relation_ref 136866 // <dependency>
+  from ref 130594 z 2006 to ref 130722
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end
