@@ -7,5 +7,5 @@ class Base(ABC):
         pass
 
     @abstractmethod
-    def help(self) -> None:
+    def help(self, x: int) -> str:
         pass
