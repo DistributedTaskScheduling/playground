@@ -1,0 +1,3 @@
+[submodule "plantuml/py-puml-tools"]
+	path = plantuml/py-puml-tools
+	url = https://github.com/ammen99/py-puml-tools
