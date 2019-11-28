@@ -3,6 +3,8 @@ from abc import abstractmethod
 
 
 class IBase(ABC):
+    """A basic interface that provides a help method."""
+
     def __init__(self):
         pass
 
