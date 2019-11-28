@@ -1,5 +1,5 @@
-from api.Base import Base
+from api.IBase import IBase
 
-class Usage(Base):
+class Usage(IBase):
     def help(self, x: int) -> str:
         return str(x * 2)

@@ -2,7 +2,7 @@ from abc import ABC
 from abc import abstractmethod
 
 
-class Base(ABC):
+class IBase(ABC):
     def __init__(self):
         pass
 
