@@ -4,5 +4,6 @@ class Decor(ABC):
     """An abstract decorator class."""
 
     @abstractmethod
-    def oper(self):
+    def oper(self) -> None:
+        """Performs an operation."""
         pass
