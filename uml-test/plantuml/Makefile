@@ -4,3 +4,4 @@ all:
 	rm py2puml.log
 	plantuml config.puml -o build
 	doxygen
+	make --directory=./build/latex
