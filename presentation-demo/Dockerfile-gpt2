@@ -12,4 +12,4 @@ RUN python3 download_model.py 774M
 RUN python3 download_model.py 1558M
 RUN chmod -R 777 /gpt-2
 
-CMD src/generate_conditional_samples.py --prompt="At KIT's Chair for Embedded Systems there is only one thing the people do all day:" --out=/tmp/out.txt --model_name=774M
+CMD src/generate_conditional_samples.py --prompt="At KIT's Chair for Embedded Systems there is only one thing the people do all day:" --out=/tmp/out.txt --model_name=1558M --temperature=0.9

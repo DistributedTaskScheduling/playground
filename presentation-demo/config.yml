@@ -1,7 +1,7 @@
 source: Dockerfile-gpt2
 label: gpt2
-threads: -1
+threads: 16
 memory: 16384
 mount:
-  - /tmp/
-  - /tmp/
+  -  - /tmp/
+     - /tmp/
