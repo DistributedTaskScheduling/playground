@@ -1,0 +1,14 @@
+FROM ubuntu:18.04
+
+ENV LANG=C.UTF-8
+RUN apt update && apt install -y git python3 python3-pip
+RUN pip3 install numpy tensorflow
+RUN git clone https://github.com/JohannesGaessler/gpt-2 /gpt-2
+WORKDIR /gpt-2
+RUN pip3 install -r requirements.txt
+RUN python3 download_model.py 124M
+RUN python3 download_model.py 355M
+RUN python3 download_model.py 774M
+RUN python3 download_model.py 1558M
+
+CMD src/generate_conditional_samples.py --prompt="At KIT's Chair for Embedded Systems there is only one thing the people do all day:" --out=/tmp/out.txt --model-name=774M
